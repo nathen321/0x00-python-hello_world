@@ -5,4 +5,4 @@ for x in range(10):
             print("89")
             break
         if y > x:
-            print("{:d}{:d}, ".format(x, y), end = "")
+            print("{:d}{:d}, ".format(x, y), end="")
