@@ -9,8 +9,6 @@ if siz == 0:
     print("0 arguments.")
 elif siz> 0:
     print("{:d} arguments:".format(siz))
-    for i in range(siz):
-        if i == 0:
-            continue
+    for i in range(1, siz + 1):
         print("{:d}: {}".format(i, lise[i]))
 
