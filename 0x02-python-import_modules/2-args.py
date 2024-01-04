@@ -5,7 +5,7 @@ lise = sys.argv
 siz = len(lise) - 1
 
 if __name__ == "__main__":
-    if siz == 0:
+    if siz < 0:
         print(siz, "arguments.")
     elif siz == 1:
         print("{:d} argument:".format(siz))
