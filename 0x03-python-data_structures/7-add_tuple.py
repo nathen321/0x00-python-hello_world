@@ -10,6 +10,14 @@ def validate(v_tuple=()):
             v_tuple = (v_tuple[0], 0)
         elif len(v_tuple) == 0:
             v_tuple = (0, 0)
-    elif len(_tuple) > 2:
+    elif len(v_tuple) > 2:
         v_tuple = (v_tuple[0], v_tuple[1])
     return v_tuple
+
+tuple_a = (1, 89)
+tuple_b = (88, 11)
+new_tuple = add_tuple(tuple_a, tuple_b)
+print(new_tuple)
+
+print(add_tuple(tuple_a, (1, )))
+print(add_tuple(tuple_a, ()))
