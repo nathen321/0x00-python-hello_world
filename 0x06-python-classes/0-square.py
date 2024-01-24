@@ -1,10 +1,15 @@
 #!/usr/bin/python3
 """Square Class
 
-This class don't do anything for the moment
+just a square
 
 """
 
 
 class Square:
+    """ suare clss
+
+    like i said a square
+
+    """
     pass
