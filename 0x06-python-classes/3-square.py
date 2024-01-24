@@ -9,15 +9,7 @@ just a square
 class Square:
     """ init a square
 
-    The __init__ method initializes the size value of the square.
-
-    Attributes:
-       size (:obj:`int`, optional): The size of the square.
-
-    Raises:
-        TypeError: If `size` type is not `int`.
-
-        ValueError: If `size` is less than `0`.
+    like i said a square
 
     """
     def __init__(self, size=0):
@@ -26,10 +18,14 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self._Square__size = size
-    
+
+    """ get area of squar
+
+    return:
+        area of squar
+    """
     def area(self):
-        """Returns the current square area
+        """" pls work
 
-        """
+        """"
         return self._Square__size ** 2
-
