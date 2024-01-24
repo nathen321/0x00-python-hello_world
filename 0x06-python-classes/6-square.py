@@ -45,7 +45,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self._Square__size = value
 
-    property
+    @property
     def position(self):
         return self.__position
 
@@ -73,7 +73,23 @@ class Square:
             print()
 
     def __check_tuple(self, position):
-        if type(position) is tuple and if type(position[0]) is int and type(position[1]) is int and if position[0] >= 0 and position[1] >= 0:
+        if type(position) is tuple and type(position[0]) is int and type(position[1]) is int and position[0] >= 0 and position[1] >= 0:
             return True
         else:
             return False
+
+
+my_square_1 = Square(3)
+my_square_1.my_print()
+
+print("--")
+
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
+
+print("--")
+
+my_square_3 = Square(3, (3, 0))
+my_square_3.my_print()
+
+print("--")
