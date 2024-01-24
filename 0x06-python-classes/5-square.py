@@ -42,13 +42,13 @@ class Square:
             raise ValueError("size must be >= 0")
         self._Square__size = value
 
-
+    """ printin the squar"""
     def my_print(self):
         """ print a squar"""
-        if self._Square__size == 0:
+        if self.size == 0:
             print()
             return
-        for x in range(self._Square__size):
-            for x in range(self._Square__size):
+        for x in range(self.size):
+            for x in range(self.size):
                 print("#", end="")
             print()
