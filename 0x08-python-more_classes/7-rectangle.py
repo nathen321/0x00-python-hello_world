@@ -82,7 +82,7 @@ class Rectangle:
 
         for i in range(h):
             for j in range(w):
-                rect_str += Rectangle.print_symbol
+                rect_str += str(self.print_symbol)
 
             if i != h - 1:
                 rect_str += '\n'
