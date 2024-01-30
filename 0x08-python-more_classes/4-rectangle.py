@@ -82,7 +82,7 @@ class Rectangle:
         return rect_str
 
     def __repr__(self):
-        """return a string representation of the rectangle to be able to recreate a new instance by using eval()"""
+        """return a string representation rectangle"""
         w = str(eval('self.width'))
         h = str(eval('self.height'))
 
