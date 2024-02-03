@@ -30,4 +30,4 @@ def text_indentation(text):
             new_string += text[idx]
             idx += 1
     
-    print(new_string, en
+    print(new_string, end='')
