@@ -2,11 +2,12 @@
 """Exact same object."""
 
 def is_same_class(obj, a_class):
-    """returns the list of available attributes and methods of an object.
+    """see if obj is a subclasse of a_class
     Args:
         obj: is a class
+        a_class: annother class
     Returns:
-        list: of attributes
+        True or False
     """
     if issubclass(obj, a_class):
         return True
