@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 def read_file(filename=""):
     with open(filename, 'r', encoding="utf-8") as fl:
-        fl.read()
+        for line in fl:
+            print(fl)
