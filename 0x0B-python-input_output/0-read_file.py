@@ -3,7 +3,4 @@
 def read_file(filename=""):
     """read file"""
     with open(filename, encoding="utf-8") as fl:
-        for line in fl:
-            print(line, end="")
-
-read_file("file")
+        print(fl.read())
