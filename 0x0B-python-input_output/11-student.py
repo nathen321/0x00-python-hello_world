@@ -25,8 +25,8 @@ class Student:
             return seld
         return dic
 
-def reload_from_json(self, json):
-    """taske: 11"""
-    for key, value in json.items:
-        if key in self.__dict__.keys():
-            self.__dict__[key] = value
+    def reload_from_json(self, json):
+        """taske: 11"""
+        for key, value in json.items:
+            if key in self.__dict__.keys():
+                self.__dict__[key] = value
