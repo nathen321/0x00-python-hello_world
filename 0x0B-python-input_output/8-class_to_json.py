@@ -4,4 +4,4 @@ def class_to_json(obj):
     """
     reads files
     """
-    return dir(obj)
+    return obj.__dict__
