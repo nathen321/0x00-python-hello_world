@@ -10,7 +10,7 @@ if path.exists('add_item.json'):
 else:
     json_file = []
 
-for i range(1, len(argv)):
+for i in range(1, len(argv)):
     json_file.append(argv[i])
 
 save_json(json_file, 'add_item.json')
