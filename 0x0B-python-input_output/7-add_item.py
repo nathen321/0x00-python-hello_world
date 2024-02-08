@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""ex:7"""
 from sys import argv
 from os import path
 load_json = __import__('6-load_from_json_file').load_from_json_file
