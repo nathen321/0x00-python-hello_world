@@ -26,6 +26,7 @@ class Student:
         return dic
 
 def reload_from_json(self, json):
+    """taske: 11"""
     for i in json:
         if i in self.__dict__.keys():
             self.__dict__[i] = json[i]
