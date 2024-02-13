@@ -61,3 +61,21 @@ class Rectangle(Base):
             raise ValueError(tp + ' must be > 0')
         if value < 0 and tp in ('x', 'y'):
             raise ValueError(tp + ' must be >= 0')
+
+    def area(self):
+        """doc"""
+        return self.__height * self.__width
+
+    def display(self):
+        """doc"""
+        if self.__y > 0:
+            print('\n' * self.__y, end='')
+
+        for i in range(self.height):
+            if self.__x > 0:
+                print(' ' * self.__x, end='')
+            print('#' * self.__width)
+
+    def __str__(self):
+        """doc"""
+        return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(self.id, self.x, self.y, self.width, self.height)
