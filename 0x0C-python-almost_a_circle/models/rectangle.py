@@ -77,5 +77,24 @@ class Rectangle(Base):
             print('#' * self.__width)
 
     def __str__(self):
-        """doc"""
+        """return a descroptionof the rectangle
+
+        >>> r1 = Rectangle(4, 6, 2, 1, 12)
+        >>> print(r1)
+        [Rectangle] (12) 2/1 - 4/6
+
+        >>> r2 = Rectangle(5, 5, 1)
+        >>> print(r2)
+        [Rectangle] (1) 1/0 - 5/5
+
+        """
         return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """doc"""
+        pass
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
