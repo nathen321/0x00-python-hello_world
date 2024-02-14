@@ -1,13 +1,19 @@
 #!/usr/bin/python3
-""" doc """
+"""
+the base classe of futer project
+"""
 from os import path
 
 class Base:
-    """ doc """
+    """
+    this class initialse the id attribue of futer class
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ doc """
+        """
+        this module is used to initalise the id attribu of futer child class
+        """
         if id is not None:
             self.id = id
         else:
