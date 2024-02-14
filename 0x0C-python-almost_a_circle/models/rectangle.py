@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-"""dooc"""
+"""
+this is scripte of a representation of a rectangle
+"""
 
 from base import Base
 
 class Rectangle(Base):
-    """doc"""
+    """
+    this class is arepresentio of a rectangle
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """doc"""
+        """
+        this module initialase attribute of tje obj
+        """
         super().__init__(id)
         self.chek_valid(width, 'width')
         self.chek_valid(height, 'height')
@@ -19,42 +25,68 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """
+        function thas return the value of width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """
+        function thas sette the value of width
+        """
         self.chek_valid(value, "width")
         self.__width = value
 
     @property
     def height(self):
+        """
+        function thas return the value of height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """
+        function thas sette the value of height
+        """
         self.chek_valid(value, "height")
         self.__height = value
 
     @property
     def x(self):
+        """
+        function thas return the value of x
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """
+        function thas sette the value of x
+        """
         self.chek_valid(value, "x")
         self.__x = value
 
     @property
     def y(self):
+        """
+        function thas return the value of y
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """
+        function thas sette the value of y
+        """
         self.chek_valid(value, "y")
         self.__y = value
 
     def chek_valid(self, value, tp):
-        """ doc """
+        """
+        this functiontion check the validity of the data
+        """
         if type(value) is not int:
             raise TypeError(tp + " must be an integer")
         if value <= 0 and tp in ("width", "height"):
@@ -63,11 +95,15 @@ class Rectangle(Base):
             raise ValueError(tp + ' must be >= 0')
 
     def area(self):
-        """doc"""
+        """
+        return the area oof the rectangle
+        """
         return self.__height * self.__width
 
     def display(self):
-        """doc"""
+        """
+        display a rectangle at x,y cordinate
+        """
         if self.__y > 0:
             print('\n' * self.__y, end='')
 
@@ -77,24 +113,26 @@ class Rectangle(Base):
             print('#' * self.__width)
 
     def __str__(self):
-        """return a descroptionof the rectangle
-
-        >>> r1 = Rectangle(4, 6, 2, 1, 12)
-        >>> print(r1)
-        [Rectangle] (12) 2/1 - 4/6
-
-        >>> r2 = Rectangle(5, 5, 1)
-        >>> print(r2)
-        [Rectangle] (1) 1/0 - 5/5
-
+        """
+        return a descroptionof the rectangle
         """
         return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
-        """doc"""
-        pass
+    def update(self, *args, **kwargs):
+        """
+        reset the attribute of the rectengle
+        """
+        argc = len(args)
+        kwargc = len(kwargs)
+        modif_attrs = ['id', 'width', 'height', 'x', 'y']
 
+        if argc > 5:
+            argc = 5
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+        if argc > 0:
+            for i in range(argc):
+                setattr(self, modif_attrs[i], args[i])
+        elif kwargc > 0:
+            for k, v in kwargs.items():
+                if k in modif_attrs:
+                    setattr(self, k, v)
