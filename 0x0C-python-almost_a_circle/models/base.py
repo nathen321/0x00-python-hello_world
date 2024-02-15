@@ -20,6 +20,7 @@ class Base:
         """
         this module is used to initalise the id attribu of futer child class
         """
+
         if id is not None:
             self.id = id
         else:
@@ -41,6 +42,7 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         """
+
         filename = cls.__name__ + '.json'
         with open(filename, mode='w', encoding='utf-8') as f:
             if list_objs is None:
@@ -58,6 +60,7 @@ class Base:
         """
         returns the list of the JSON string representation json_string
         """
+
         if json_string is None or len(json_string) == 0:
             return []
 
@@ -68,6 +71,7 @@ class Base:
         """
         returns an instance with all attributes already set
         """
+
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
@@ -80,6 +84,7 @@ class Base:
         """
         returns a list of instances
         """
+
         file_name = cls.__name__ + ".json"
 
         if path.exists(file_name) is False:
