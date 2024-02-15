@@ -3,7 +3,8 @@
 this is scripte of a representation of a rectangle
 """
 
-from base import Base
+from models.base import Base
+
 
 class Rectangle(Base):
     """
@@ -116,7 +117,8 @@ class Rectangle(Base):
         """
         return a descroptionof the rectangle
         """
-        return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(
+                self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """
@@ -136,3 +138,10 @@ class Rectangle(Base):
             for k, v in kwargs.items():
                 if k in modif_attrs:
                     setattr(self, k, v)
+
+    def to_dictionary(self):
+        """
+        returns the dictionary representation of a Rectangle
+        """
+        return {'id': self.id, 'width': self.width,
+                'height': self.height, 'x': self.x, 'y': self.y}
