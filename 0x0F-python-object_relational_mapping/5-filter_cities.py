@@ -21,7 +21,7 @@ if __name__ == '__main__':
                 WHERE states.name = %s", [argv[4]])
 
     rows = cur.fetchall()
-    liste = [cti[1] for cti in rows ]
+    liste = [cti[1] for cti in rows]
     print(", ".join(liste))
     # Clean up process
     cur.close()
