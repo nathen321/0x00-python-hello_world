@@ -1,3 +1,3 @@
 #!/bin/bash
 #Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the response
-curl -Xs DELETE $1 -L
+curl -X DELETE $1 -L
