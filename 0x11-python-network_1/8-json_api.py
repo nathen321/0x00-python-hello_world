@@ -15,6 +15,6 @@ if __name__ == '__main__':
         if len(info) == 0 or "id" not in info or "name" not in info:
             print("No result")
         else:
-            print("{} {}".format(info.get("id"), info.get("name")))
+            print("[{}] {}".format(info.get("id"), info.get("name")))
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
