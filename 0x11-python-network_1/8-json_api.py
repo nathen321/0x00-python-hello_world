@@ -14,6 +14,7 @@ if __name__ == '__main__':
         info = r.json()
         if len(info) == 0 or "id" not in info or "name" not in info:
             print("No result")
-        print("{} {}".format(info.get("id"), info.get("name")))
+        else:
+            print("{} {}".format(info.get("id"), info.get("name")))
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
